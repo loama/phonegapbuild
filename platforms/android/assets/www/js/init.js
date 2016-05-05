@@ -16,7 +16,6 @@ $("form").submit(function() {
           jsondata = jQuery.parseJSON(data);
           alliance = jsondata.alliance_name;
           foto = jsondata.request;
-          console.log(jsondata.store_id);
           logincard = document.getElementById("#CardLogin");
           
           if (alliance == "falso") {
@@ -25,9 +24,9 @@ $("form").submit(function() {
             $('#CardLogin').addClass("animated shake").one(animationEnd, function() {
                 $(this).removeClass('animated ' + 'shake')});
           } else { 
-            var loginScreen = document.getElementById("login-screen");
-            myApp.closeModal(loginScreen);
-            console.log("bien");
+            var loginScreen = document.getElementById("loginScreen");
+            $("#loginScreen").addClass("animated bounceOutLeft");
+            console.log(jsondata.store_id);
             var background = "img/alianzas/" + foto + ".png"
             document.getElementById('body').style.background = 'url('+background+')';
             document.getElementById('body').style.backgroundPosition = 'top center';

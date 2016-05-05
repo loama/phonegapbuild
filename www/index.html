@@ -12,14 +12,17 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="bottom-nav" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="center">
-        <a href="#" onclick="window.open('http://www.kidzout.com', '_system');">www.kidzout.com</a>
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
+  <div class="bottom-nav">
+    <div class="nav-wrapper container">
+      <center>
+        <ul class="tabs transparent">
+          <li class="tab col s3"><a href="#test1">Nuevos</a></li>
+          <li class="tab col s3"><a class="active" href="#test2">En Progreso</a></li>
+          <li class="tab col s3"><a href="#test4">Finalizados</a></li>
+        </ul>
+      </center>
     </div>
-  </nav>
+  </div>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
@@ -45,7 +48,7 @@
                 <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="email">
               </div>
               <div class="input-field col s12">
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="password">
+                <input placeholder="Placeholder" id="password" type="password" class="validate" name="password">
               </div> 
             </div>
             <input type="submit"></input>

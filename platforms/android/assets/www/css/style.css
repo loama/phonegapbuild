@@ -15,12 +15,23 @@
 
 body {
 	max-height: 100vh;
+	font-family: "avenir";
+}
+
+.transparent {
+	background-color: transparent;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url("../fonts/avenir/Roboto-Light.eot");
 }
 
 .bottom-nav {
 	background-color: rgba(0,0,0,0.1);
 	position: fixed;
 	bottom: 0;
+	width: 100vw;
 }
 .card-rounded {
 	border-radius: 10px !important;
@@ -42,4 +53,17 @@ body {
 	width: 100vw;
 	background-image: url('../img/art_2693.jpg');
 	background-repeat: repeat;
+}
+
+.tabs .tab a {
+	text-transform: none;
+	color: #fff;	
+}
+
+.tabs .tab a.active{
+	color: #fd6250;	
+}
+
+.tabs .tab a:hover {
+	color: #fd6250;
 }
