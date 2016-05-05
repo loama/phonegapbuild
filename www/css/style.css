@@ -13,10 +13,40 @@
 	font-size: inherit;
 }
 
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(materialicons.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
 	max-height: 100vh;
 	font-family: "avenir";
+	background-position: top center;
+	background-size: auto 100vh;
 }
+
+.header {
+	height: 30vh;
+} 
 
 .transparent {
 	background-color: transparent;
@@ -24,7 +54,7 @@ body {
 
 @font-face {
   font-family: "avenir";
-  src: url("../fonts/avenir/Roboto-Light.eot");
+  src: url("../font/AvenirLTStd-Book.otf");
 }
 
 .bottom-nav {
@@ -35,6 +65,14 @@ body {
 }
 .card-rounded {
 	border-radius: 10px !important;
+}
+
+.tabs .indicator {
+  background-color: #fd6250;
+}
+
+.loginBtn{
+	text-transform: none;
 }
 
 .top-image-login {
@@ -57,7 +95,12 @@ body {
 
 .tabs .tab a {
 	text-transform: none;
-	color: #fff;	
+	color: #fff;
+	margin-top: 10px;	
+}
+
+.orders {
+	background-color: #fff;
 }
 
 .tabs .tab a.active{

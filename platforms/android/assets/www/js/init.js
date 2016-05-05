@@ -25,10 +25,11 @@ $("form").submit(function() {
                 $(this).removeClass('animated ' + 'shake')});
           } else { 
             var loginScreen = document.getElementById("loginScreen");
-            $("#loginScreen").addClass("animated bounceOutLeft");
-            console.log(jsondata.store_id);
+            $("#loginScreen").addClass("animated bounceOutDown");
+            var foto = jsondata.request;
+            console.log(foto);
             var background = "img/alianzas/" + foto + ".png"
-            document.getElementById('body').style.background = 'url('+background+')';
+            document.body.style.backgroundImage = 'url('+background+')';
             document.getElementById('body').style.backgroundPosition = 'top center';
             document.getElementById('body').style.backgroundSize = 'cover';
 
@@ -38,3 +39,8 @@ $("form").submit(function() {
 
       return false; // prevent normal submit
   });
+
+function submitForm () {
+  console.log("hola");
+  $('#submitBtn').click();
+};

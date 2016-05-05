@@ -16,24 +16,47 @@
     <div class="nav-wrapper container">
       <center>
         <ul class="tabs transparent">
-          <li class="tab col s3"><a href="#test1">Nuevos</a></li>
-          <li class="tab col s3"><a class="active" href="#test2">En Progreso</a></li>
+          <li class="tab col s3"><a class="active" href="#test1">Nuevos</a></li>
+          <li class="tab col s3"><a href="#test2">En Progreso</a></li>
           <li class="tab col s3"><a href="#test4">Finalizados</a></li>
         </ul>
       </center>
     </div>
   </div>
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+    <div class="header">
+      
+    </div>
+
+    <div id="test1" class="col s12"><a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+
+    </div>
+    <div id="test2" class="col s12">
+      <div class="container">
+        <ul class="collapsible " data-collapsible="accordion" style="background-color: #fff;">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+        </ul>
       </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-      </div>
-      <br><br>
+    </div>
+    <div id="test3" class="col s12">
+
+    
+
+    </div>
+    <div id="test4" class="col s12">
+
+
 
     </div>
   </div>
@@ -42,7 +65,7 @@
       <img src="img/logo3d.png" class="top-image-login center-block">
       <div class="card card-rounded" id="CardLogin">
         <div class="card-content">
-          <form class="col s12" action="http://52.10.76.37/alien/public/auth" method="post" name="form" target="my_iframe">
+          <form class="col s12" action="http://52.10.76.37/alien/public/auth" method="post" name="form" target="my_iframe" id="login-form">
             <div class="row">
               <div class="input-field col s12">
                 <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="email">
@@ -51,11 +74,11 @@
                 <input placeholder="Placeholder" id="password" type="password" class="validate" name="password">
               </div> 
             </div>
-            <input type="submit"></input>
+            <input type="submit" id="submitBtn" style="display: none"></input>
           </form>
         </div>
       </div>
-      <center><a class="waves-effect waves-light btn green" type="submit" onclick="closeLoginModal()"><i class="material-icons left center-block">cloud</i>Iniciar sesión</a></center>
+      <center><a class="waves-effect waves-light btn green loginBtn" onclick="submitForm()"><i class="material-icons left center-block">cloud</i>Iniciar sesión</a></center>
     </div>  
   </div>
   <iframe src="" name="my_iframe"></iframe>
