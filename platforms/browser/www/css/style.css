@@ -63,6 +63,11 @@ body {
 	bottom: 0;
 	width: 100vw;
 }
+
+.container .row {
+	margin: 0;
+}
+
 .card-rounded {
 	border-radius: 10px !important;
 }
@@ -91,6 +96,12 @@ body {
 	width: 100vw;
 	background-image: url('../img/art_2693.jpg');
 	background-repeat: repeat;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .tabs .tab a {

@@ -11,8 +11,8 @@
   <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
-  <div class="bottom-nav">
+<body style="max-height: 100vh; overflow: hidden;">
+  <div class="bottom-nav" style="z-index: 3">
     <div class="nav-wrapper container">
       <center>
         <ul class="tabs transparent">
@@ -33,7 +33,7 @@
     </div>
     <div id="test2" class="col s12">
       <div class="container">
-        <ul class="collapsible " data-collapsible="accordion" style="background-color: #fff;">
+        <ul class="collapsible " data-collapsible="accordion" style="background-color: #fff; max-height: 68vh; overflow: scroll; z-index: 2" id="nuevasordenesTab">
           <li>
             <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
             <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
@@ -112,6 +112,13 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.collapsible').collapsible({
+        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+      });
+    });
+  </script>
 
   </body>
 </html>
