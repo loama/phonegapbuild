@@ -6,14 +6,14 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Rappi Alianzas</name>
+    <name>Hello World</name>
 
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>
 
-    <author href="http://rappi.com" email="rappitequiere@rappi.com">
-        Rappi Dev
+    <author href="http://phonegap.com" email="support@phonegap.com">
+        PhoneGap Team
     </author>
 
     <!-- Define the main entry-point to the application -->
@@ -22,7 +22,6 @@
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
-    <preference name="orientation" value="portrait" />
     <preference name="android-minSdkVersion"      value="14" />
 
     <!-- Define a specific version of PhoneGap to build into your app. -->
@@ -53,7 +52,7 @@
 
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />
-    <!--<platform name="android">
+    <platform name="android">
         <icon   src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi" />
         <icon   src="www/res/icon/android/drawable-mdpi-icon.png"               density="mdpi" />
         <icon   src="www/res/icon/android/drawable-hdpi-icon.png"               density="hdpi" />
@@ -73,8 +72,7 @@
         <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi" />
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
     </platform>
-    -->
-    <!--
+
     <platform name="ios">
         <icon   src="www/res/icon/ios/icon.png"                         platform="ios" width="57"   height="57" />
         <icon   src="www/res/icon/ios/icon@2x.png"                      platform="ios" width="114"  height="114" />
@@ -103,7 +101,7 @@
         <splash src="www/res/screen/ios/Default@2x~iphone.png"          platform="ios" width="640"  height="960" />
         <splash src="www/res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
     </platform>
-    -->
+
     <platform name="wp8">
         <icon   src="www/res/icon/wp8/ApplicationIcon.png"   platform="wp8" width="99"  height="99" />
         <icon   src="www/res/icon/wp8/Background.png"        platform="wp8" width="159" height="159" />

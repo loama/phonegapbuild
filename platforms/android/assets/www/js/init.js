@@ -35,24 +35,23 @@ $("form").submit(function() {
 
       $.ajax({
         type: "GET",
-        url: "http://52.10.76.37/alien/public/orders/palmitos?type=new",
+        url: "http://52.10.76.37/alien/public/orders/palmitos?type=finished",
         dataType: "json",
         success : function(data) {
                       json = data;
-                      
-                      
+
                       for (i = 0; i < json.length; i++){
-                      products = data[i].products;
-                        for (h = 0; h < products.length; h++){
-                          new_orders= "<li><div class='collapsible-header valing-wrapper row' style='margin-bottom:0;'><div class='col s3' style='height:80px'><span class='helper'></span><img src='http://v2.mxgrability.rappi.com/uploads/products/low/" + data[i].products[0].image + " 'style='margin-top:10px; vertical-align:middle' width='80px'></div> <div class='col s6'><p>" + data[i].products[0].name + "</div></div><div class='collapsible-body' style='min-height:30px'><p>" + data[i].products[0].image + "</p></div></li>";
-
-
-                          /*"<li onclick='consola(" + [i] +")'><a href='form.html' data-popup='.popup-" + [i] +"' class='item-link item-content'><div class='item-media'></div><div class='item-inner'><div class='item-title-row'><div class='item-title'>" + data[i].products[h].name + "</div><div class='item-after'>" + data[i].datetime.substring(11, 16) + "<br>" + data[i].status + "</div></div><div class='item-subtitle'>"+ data[i].order_id +"</div><div class='item-text'>" + data[i].products[h].description + "</div></div></a></li>";*/
-                      $('#nuevasordenesTab').append(new_orders);
-                      $('#nuevasordenesTab').addClass("animated bounceInUp");
+                          products = data[i].products;
+                          new_orders1= "<li><div class='collapsible-header'><div class='row' style='padding: 0'><div class='col s3 m2'><img src='http://v2.mxgrability.rappi.com/uploads/products/low/" + data[i].products[0].image + "' style='margin-top: 15px; max-height: 48px; max-width: 100%'></div><div class='col s6 m7' style='line-height: 1rem'><br><b class='product-title'>" + data[i].products[0].name + "</b><br>" + data[i].order_id + "<br><div style='text-overflow: ellipsis; max-width: 100%; height: 1rem; white-space: nowrap; overflow: hidden;'>" + data[i].products[0].description + "</div></div><div class='col s3 m3' style='text-align: right; line-height: 1rem'><br>" + data[i].datetime + "<br>" + data[i].status + "</div></div></div><div class='collapsible-body'><div class='container' id='collapsible"+ [i] +"' style='margin-bottom:20px'><table><thead><tr><th data-field='quantity'>Cantidad</th><th data-field='products'>Producto</th><th data-field='special'>Peticiones especiales</th></tr></thead><tbody id=tbody"+ [i] +"></tbody></table><center><a class='waves-effect waves-light btn purple'>Finalizada</a></center></div></div></li>";
+                          $('#nuevasordenesTab').append(new_orders1);
+                          $('#nuevasordenesTab').addClass("animated bounceInUp");
+                          for (h = 0; h < products.length; h++){ 
+                            order_data = "<tr>" + "<td>" + data[i].products[h].units + "</td>" + "<td>" + data[i].products[h].name + "</td>" + "<td>" + "</td>" + "</tr>";
+                            collapsible = "#tbody" + [i];
+                            $(collapsible).append(order_data);
+                          } 
                       
-                    }
-                    }
+                      }
                     if (json.length > 0) { $('#notifications').append("<span class='badge bg-red' style='position: absolute; top: 5px; right: 25px'>" + json.length + "</span>"); };
 
                       for (i = 0; i < json.length; i++){
@@ -62,13 +61,9 @@ $("form").submit(function() {
                         var order_products=(data[i].products.product_id);
                         for (h = 0; h < products.length; h++){
                           var product_id= (data[i].products[0].product_id);
-                          console.log(data[i].products[0].image);
-                          console.log(data[i].products[0].name);
-                          console.log(data[i].products[0].description);
+                          
                         }
-                        console.log(data[i].rt[0].name)
-                        console.log(data[i].rt[0].profile_pic);
-                        console.log(data[i].rt[0].telephone);
+                        
                       }
                   }
                });

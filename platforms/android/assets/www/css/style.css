@@ -57,11 +57,20 @@ body {
   src: url("../font/AvenirLTStd-Book.otf");
 }
 
+@font-face {
+  font-family: "avenir-black";
+  src: url("../font/AvenirLTStd-Black.otf");
+}
+
 .bottom-nav {
 	background-color: rgba(0,0,0,0.1);
 	position: fixed;
 	bottom: 0;
 	width: 100vw;
+}
+
+.product-title {
+	font-family: 'avenir-black';
 }
 
 .container .row {
