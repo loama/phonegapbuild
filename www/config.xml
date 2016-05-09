@@ -108,7 +108,7 @@
         <splash src="www/res/screen/wp8/screen-portrait.jpg" platform="wp8" width="768" height="1280" />
     </platform>
     -->
-    <platform name="windows">
+    <!--<platform name="windows">
         <!-- For Windows the recommended approach to define app icons is to use target attribute -->
         <!-- <icon src="www/res/icon/windows/StoreLogo.png"         target="StoreLogo" /> -->
         <!-- <icon src="www/res/icon/windows/Square30x30Logo.png"   target="Square30x30Logo" /> -->
@@ -117,12 +117,12 @@
         <!-- <icon src="www/res/icon/windows/Square71x71Logo.png"   target="Square71x71Logo" /> -->
         <!-- <icon src="www/res/icon/windows/Square150x150Logo.png" target="Square150x150Logo" /> -->
         <!-- <icon src="www/res/icon/windows/Square310x310Logo.png" target="Square310x310Logo" /> -->
-        <!-- <icon src="www/res/icon/windows/Wide310x150Logo.png"   target="Wide310x150Logo" /> -->
+        <!-- <icon src="www/res/icon/windows/Wide310x150Logo.png"   target="Wide310x150Logo" /> 
         <icon src="www/res/icon/windows/Square150x150Logo.scale-100.png"     platform="windows"   width="150"  height="150" />
         <icon src="www/res/icon/windows/Square30x30Logo.scale-100.png"       platform="windows"   width="30"   height="30" />
         <icon src="www/res/icon/windows/StoreLogo.scale-100.png"             platform="windows"   width="50"   height="50" />
         <splash src="www/res/screen/windows/SplashScreen.scale-100.png"      platform="windows"   width="620"  height="300" />
-        <!-- scaled images are specified here for backward compatibility only so we can find them by size -->
+        <!-- scaled images are specified here for backward compatibility only so we can find them by size 
         <icon   src="www/res/icon/windows/StoreLogo.scale-240.png"           platform="windows"   width="120"  height="120" />
         <icon   src="www/res/icon/windows/Square44x44Logo.scale-100.png"     platform="windows"   width="44"   height="44" />
         <icon   src="www/res/icon/windows/Square44x44Logo.scale-240.png"     platform="windows"   width="106"  height="106" />
