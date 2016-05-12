@@ -63,7 +63,7 @@ body {
 }
 
 .bottom-nav {
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.5);
 	position: fixed;
 	bottom: 0;
 	width: 100vw;
@@ -103,8 +103,8 @@ body {
 	z-index: 30;
 	height: 100vh;
 	width: 100vw;
-	background-image: url('../img/art_2693.jpg');
-	background-repeat: repeat;
+	background-image: url('../img/madera.jpg');
+	background-size: contain;
 }
 
 .helper {
