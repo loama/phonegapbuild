@@ -65,11 +65,17 @@ $("form").submit(function() {
         dataType: "json",
         success : function(data) {
                       json = data;
-
+                      if (json.length == 0) {
+                        $('#enprogresoordenesTab').append("no tienes ordenes en esta seccion");
+                        $('#enprogresoordenesTab').addClass("animated bounceInUp");
+                      }
                       for (i = 0; i < json.length; i++){
                           products = data[i].products;
                           status1 = data[i].status;
-                          new_orders1= "<li><div class='collapsible-header'><div class='row' style='padding: 0'><div class='col s3 m2'><img src='http://v2.mxgrability.rappi.com/uploads/products/low/" + data[i].products[0].image + "' style='margin-top: 15px; max-height: 48px; max-width: 100%'></div><div class='col s6 m7' style='line-height: 1rem'><br><b class='product-title'>" + data[i].products[0].name + "</b><br>" + data[i].order_id + "<br><div style='text-overflow: ellipsis; max-width: 100%; height: 1rem; white-space: nowrap; overflow: hidden;'>" + data[i].products[0].description + "</div></div><div class='col s3 m3' style='text-align: right; line-height: 1rem'><br>" + data[i].datetime + "<br>" + data[i].status + "</div></div></div><div class='collapsible-body'><div class='container' id='collapsible"+ [i] +"' style='margin-bottom:20px'><table><thead><tr><th data-field='quantity'>Cantidad</th><th data-field='products'>Producto</th><th data-field='special'>Peticiones especiales</th></tr></thead><tbody id=tbody"+ [i] +"></tbody></table><center><a class='waves-effect waves-light btn green' onclick='orderid="+data[i].order_id+"; changeStatus();'>Tomar</a></center></div></div></li>";
+                          if (data[i].status == "taked_by_rt") {
+                            var status1 = "Nueva";
+                          }
+                          new_orders1= "<li><div class='collapsible-header'><div class='row' style='padding: 0'><div class='col s3 m2'><img src='http://v2.mxgrability.rappi.com/uploads/products/low/" + data[i].products[0].image + "' style='margin-top: 15px; max-height: 48px; max-width: 100%'></div><div class='col s6 m7' style='line-height: 1rem'><br><b class='product-title'>" + data[i].products[0].name + "</b><br>" + data[i].order_id + "<br><div style='text-overflow: ellipsis; max-width: 100%; height: 1rem; white-space: nowrap; overflow: hidden;'>" + data[i].products[0].description + "</div></div><div class='col s3 m3' style='text-align: right; line-height: 1rem'><br>" + data[i].datetime.substring(10,16) + "<br>" + status1 + "</div></div></div><div class='collapsible-body'><div class='container' id='collapsible"+ [i] +"' style='margin-bottom:20px'><table><thead><tr><th data-field='quantity'>Cantidad</th><th data-field='products'>Producto</th><th data-field='special'>Peticiones especiales</th></tr></thead><tbody id=tbody"+ [i] +"></tbody></table><center><a class='waves-effect waves-light btn green' onclick='orderid="+data[i].order_id+"; changeStatus();'>Tomar</a></center></div></div></li>";
                           $('#nuevasordenesTab').append(new_orders1);
                           $('#nuevasordenesTab').addClass("animated bounceInUp");
                           for (h = 0; h < products.length; h++){ 
@@ -102,7 +108,10 @@ $("form").submit(function() {
         dataType: "json",
         success : function(data) {
                       json = data;
-
+                      if (json.length == 0) {
+                        $('#enprogresoordenesTab').append("no tienes ordenes en esta seccion");
+                        $('#enprogresoordenesTab').addClass("animated bounceInUp");
+                      }
                       for (i = 0; i < json.length; i++){
                           products = data[i].products;
                           new_orders1= "<li><div class='collapsible-header'><div class='row' style='padding: 0'><div class='col s3 m2'><img src='http://v2.mxgrability.rappi.com/uploads/products/low/" + data[i].products[0].image + "' style='margin-top: 15px; max-height: 48px; max-width: 100%'></div><div class='col s6 m7' style='line-height: 1rem'><br><b class='product-title'>" + data[i].products[0].name + "</b><br>" + data[i].order_id + "<br><div style='text-overflow: ellipsis; max-width: 100%; height: 1rem; white-space: nowrap; overflow: hidden;'>" + data[i].products[0].description + "</div></div><div class='col s3 m3' style='text-align: right; line-height: 1rem'><br>" + data[i].datetime + "<br>" + data[i].status + "</div></div></div><div class='collapsible-body'><div class='container' id='collapsible"+ [i] +"' style='margin-bottom:20px'><table><thead><tr><th data-field='quantity'>Cantidad</th><th data-field='products'>Producto</th><th data-field='special'>Peticiones especiales</th></tr></thead><tbody id=tbody"+ [i] +"></tbody></table><center><a class='waves-effect waves-light btn orange' onclick='changeStatus2()'>" + data[i].status + "</a></center></div></div></li>";
@@ -137,7 +146,10 @@ $("form").submit(function() {
         dataType: "json",
         success : function(data) {
                       json = data;
-
+                      if (json.length == 0) {
+                        $('#finalizadasordenesTab').append("no tienes ordenes en esta seccion");
+                        $('#finalizadasordenesTab').addClass("animated bounceInUp");
+                      }
                       for (i = 0; i < json.length; i++){
                           products = data[i].products;
                           new_orders1= "<li><div class='collapsible-header'><div class='row' style='padding: 0'><div class='col s3 m2'><img src='http://v2.mxgrability.rappi.com/uploads/products/low/" + data[i].products[0].image + "' style='margin-top: 15px; max-height: 48px; max-width: 100%'></div><div class='col s6 m7' style='line-height: 1rem'><br><b class='product-title'>" + data[i].products[0].name + "</b><br>" + data[i].order_id + "<br><div style='text-overflow: ellipsis; max-width: 100%; height: 1rem; white-space: nowrap; overflow: hidden;'>" + data[i].products[0].description + "</div></div><div class='col s3 m3' style='text-align: right; line-height: 1rem'><br>" + data[i].datetime + "<br>" + data[i].status + "</div></div></div><div class='collapsible-body'><div class='container' id='collapsible"+ [i] +"' style='margin-bottom:20px'><table><thead><tr><th data-field='quantity'>Cantidad</th><th data-field='products'>Producto</th><th data-field='special'>Peticiones especiales</th></tr></thead><tbody id=tbody"+ [i] +"></tbody></table><center><a class='waves-effect waves-light btn purple' onclick='console.log(data[i].order_id)'>Finalizada</a></center></div></div></li>";
